@@ -297,7 +297,7 @@ function loadChals() {
         const categoryrow = $(
           "" +
             '<div id="{0}-row" class="pt-5">'.format(categoryid) +
-            '<div class="category-header col-md-12 mb-3">' +
+            '<div style="color:#dad6d8;" class="category-header col-md-12 mb-3">' +
             "</div>" +
             '<div class="category-challenges col-md-12">' +
             '<div class="challenges-row col-md-12"></div>' +
@@ -306,7 +306,7 @@ function loadChals() {
         );
         categoryrow
           .find(".category-header")
-          .append($("<h3>" + category + "</h3>"));
+          .append($("<h3 style='color:#dad6d8;'>" + category + "</h3>"));
 
         $challenges_board.append(categoryrow);
       }
@@ -317,7 +317,7 @@ function loadChals() {
       const chalid = chalinfo.name.replace(/ /g, "-").hashCode();
       const catid = chalinfo.category.replace(/ /g, "-").hashCode();
       const chalwrap = $(
-        "<div id='{0}' class='col-md-3 d-inline-block'></div>".format(chalid)
+        "<div style='color:#602b97' id='{0}' class='col-md-3 d-inline-block'></div>".format(chalid)
       );
       let chalbutton;
 

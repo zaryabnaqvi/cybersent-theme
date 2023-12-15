@@ -4,6 +4,15 @@
 {% endblock %}
 
 {% block content %}
+
+<style>
+	.btn-outline-purple{
+  color:#602b97;
+  background:#050208;
+  border:0.2rem solid #602b97;
+  border-radius:0.8rem;
+}
+</style>
 <div class="jumbotron">
 	<div class="container">
 		<h1>Register</h1>
@@ -15,7 +24,7 @@
 			{% include "components/errors.html" %}
 
 			{% if integrations.mlc() %}
-			<a class="btn btn-secondary btn-lg btn-block" href="{{ url_for('auth.oauth_login') }}">
+			<a class="btn btn-outline-purple btn-lg btn-block" href="{{ url_for('auth.oauth_login') }}">
 				Login with Major League Cyber
 			</a>
 
@@ -25,22 +34,22 @@
 			{% with form = Forms.auth.RegistrationForm() %}
 			{% from "macros/forms.html" import render_extra_fields %}
 			<form method="post" accept-charset="utf-8" autocomplete="off" role="form">
-				<div class="form-group">
-					<b>{{ form.name.label }}</b>
+				<div class="form-group text-white">
+					<b class="text-white">{{ form.name.label }}</b>
 					{{ form.name(class="form-control", value=name) }}
 					<small class="form-text text-muted">
 						Your username on the site
 					</small>
 				</div>
-				<div class="form-group">
-					<b>{{ form.email.label }}</b>
+				<div class="form-group text-white">
+					<b class="text-white">{{ form.email.label }}</b>
 					{{ form.email(class="form-control", value=email) }}
 					<small class="form-text text-muted">
 						Never shown to the public
 					</small>
 				</div>
-				<div class="form-group">
-					<b>{{ form.password.label }}</b>
+				<div class="form-group text-white">
+					<b class="text-white">{{ form.password.label }}</b>
 					{{ form.password(class="form-control", value=password) }}
 					<small class="form-text text-muted">
 						Password used to log into your account
@@ -52,14 +61,14 @@
 
 				<div class="row pt-3">
 					<div class="col-md-12">
-						{{ form.submit(class="btn btn-md btn-primary btn-outlined float-right") }}
+						{{ form.submit(class="btn btn-md btn-outline-purple float-right") }}
 					</div>
 				</div>
 
 				{% if Configs.tos_or_privacy %}
 				<div class="row pt-3">
-					<div class="col-md-12 text-center">
-						<small class="text-muted text-center">
+					<div class="col-md-12 text-white">
+						<small class="text-muted text-white">
 							By registering, you agree to the
 							<a href="{{ Configs.privacy_link }}" rel="noopener" target="_blank">privacy policy</a>
 							and <a href="{{ Configs.tos_link }}" rel="noopener" target="_blank">terms of service</a>

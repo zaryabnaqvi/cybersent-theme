@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+
 
 WORKERS=${WORKERS:-1}
 WORKER_CLASS=${WORKER_CLASS:-gevent}

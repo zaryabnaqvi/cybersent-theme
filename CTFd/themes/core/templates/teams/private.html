@@ -4,6 +4,12 @@
 {% endblock %}
 
 {% block content %}
+
+<style>
+	.badge-purple{
+		background:darkmagenta
+	}
+</style>
 	<div id="team-edit-modal" class="modal fade">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
@@ -247,7 +253,7 @@
 		<div class="row min-vh-25">
 			<div class="col-md-12">
 				<h3>Members</h3>
-				<table class="table table-striped">
+				<table class="table table-striped text-white">
 					<thead>
 					<tr>
 						<td><b>User Name</b></td>
@@ -262,7 +268,7 @@
 									{{ member.name }}
 								</a>
 								{% if team.captain_id == member.id %}
-									<span class="badge badge-primary ml-2">Captain</span>
+									<span class="badge badge-purple ml-2">Captain</span>
 								{% endif %}
 							</td>
 							<td>{{ member.score }}</td>

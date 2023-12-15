@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<style>
+	h3{
+		color: aliceblue!important;
+	}
+
+	</style>
 	<title>{{ Configs.ctf_name }}</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,19 +35,21 @@
 	</script>
 	{{ Configs.theme_header }}
 </head>
-<body>
+<body style="background-color: #050208" >
 	{% include "components/navbar.html" %}
 
-	<main role="main">
+	<main style="background-color: #050208;" role="main">
 		{% block content %}
 		{% endblock %}
 	</main>
 
-	<footer class="footer">
+	<footer class="footer overflow-warp" style="background-color: #630099;">
 		<div class="container text-center">
-			<a href="https://ctfd.io" class="text-secondary">
-				<small class="text-muted">Powered by CTFd</small>
+			<img style="width: 100px; height: auto; mix-blend-mode: color-burn;" src="https://cct.neduet.edu.pk/sites/default/files/CT_logo.jpeg"/>
+			<a href="https://cct.neduet.edu.pk/" class="text-secondary">
+				<small style="color: aliceblue;" class="">Organized By CyberSENTS CSIT Department NEDUET</small>
 			</a>
+			<img style="width: 50px; height: auto;" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8b/NEDUET_logo.svg/1200px-NEDUET_logo.svg.png" alt="" srcset="">
 		</div>
 	</footer>
 
